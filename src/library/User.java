@@ -10,8 +10,8 @@ public class User {
     }
 
     public User(String name, boolean isPremium) {
-        this.isPremium = isPremium;
-        this.name = name;
+       setName(name);
+       setPremium(isPremium);
     }
 
     public String getName() {
@@ -30,4 +30,7 @@ public class User {
         isPremium = premium;
     }
 
+    public void update(String message){
+        System.out.println("Notification sent: "+message);
+    }
 }

@@ -8,14 +8,20 @@ public abstract class BookDecorator implements BookInterface {
         this.decoratedBook = decoratedBook;
     }
 
-    @Override
     public void borrowBook(User user) {
         decoratedBook.borrowBook(user);
     }
 
-    @Override
     public void returnBook() {
         decoratedBook.returnBook();
+    }
+
+    public String getTitle() {
+        return decoratedBook.getTitle();
+    }
+
+    public boolean isAvailable() {
+        return decoratedBook.isAvailable();
     }
 
 }
